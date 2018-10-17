@@ -1,8 +1,17 @@
 import React, {Component} from 'react';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
 import {Image} from "react-native";
+import axios from 'axios';
+import {connect} from 'react-redux';
 
 class InfoScreen extends Component{
+    state = {
+        list_item:[],
+        storedValue: '',
+        flag:false,
+
+
+    };
     render(){
         return(
             <Container>
@@ -19,7 +28,7 @@ class InfoScreen extends Component{
                     </CardItem>
                     <CardItem>
                         <Body>
-                            <Image source={{uri: '../assets/bus.png'}} style={{height: 200, width: 200, flex: 1}}/>
+                            <Image source={{uri: '../assets/bus.png'}} style={{height: 300, width: 200, flex: 1}}/>
                         <Text>
                             Train data to come here!
                         </Text>
